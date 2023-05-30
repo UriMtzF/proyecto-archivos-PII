@@ -15,4 +15,8 @@ public class Gato extends Mascota{
         String datosExtra = color + "'" + tamano;
         crearEscribirArchivo(datosExtra);
     }
+    public void consultarGato() {
+        String categorias = "Color'Tamaño";
+        consultarMascota(categorias);
+    }
 }

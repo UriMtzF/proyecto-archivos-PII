@@ -14,4 +14,8 @@ public class Perro extends Mascota{
         String datosExtra = raza + "'" + tamano;
         crearEscribirArchivo(datosExtra);
     }
+    public void consultarPerro() {
+        String categorias = "Raza'Tamaño";
+        consultarMascota(categorias);
+    }
 }
