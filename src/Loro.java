@@ -1,2 +1,2 @@
-public class Loro {
+public class Loro extends Mascota{
 }
