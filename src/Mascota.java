@@ -48,7 +48,7 @@ public class Mascota {
             BufferedReader registro = new BufferedReader(leerArchivo);
             String linea;
             StringBuilder texto = new StringBuilder();
-            texto.append("Clave'Nombre-Dueño'Nombre-Mascota'Edad-Mascota'Dirección'Teléfono'Prioridad'Precio").append(categorias).append("\n");
+            texto.append("Clave'Nombre-Dueño'Nombre-Mascota'Edad-Mascota'Dirección'Teléfono'Prioridad'Precio'").append(categorias).append("\n");
 
             while ((linea = registro.readLine()) != null) {
                 texto.append(linea).append("\n");
