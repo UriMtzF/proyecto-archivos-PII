@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class Vista {
     public Vista() {
@@ -35,5 +36,32 @@ public class Vista {
             case 2 -> "Grande";
             default -> "Sin dato";
         };
+    }
+
+    public void mostrarTexto(StringBuilder texto) {
+        String[] lines = texto.toString().split("\n");
+
+        String[] headers = lines[0].split("'");
+        int columnCount = headers.length;
+
+        DefaultTableModel model = new DefaultTableModel(0, columnCount);
+        model.setColumnIdentifiers(headers);
+
+        for (int i = 1; i < lines.length; i++) {
+            String[] values = lines[i].split("'");
+            model.addRow(values);
+        }
+
+        JTable table = new JTable(model);
+        JScrollPane scrollPane = new JScrollPane(table);
+
+        JDialog dialog = new JDialog();
+        dialog.setTitle("Información guardada");
+        dialog.setModal(true);
+        dialog.getContentPane().add(scrollPane);
+
+        dialog.pack();
+        dialog.setLocationRelativeTo(null);
+        dialog.setVisible(true);
     }
 }
