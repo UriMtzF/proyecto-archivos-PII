@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -38,6 +40,22 @@ public class Mascota {
     public void crearEscribirArchivo(String datosExtra) throws IOException {
         try (FileWriter escribirArchivo = new FileWriter(nombreArchivo)) {
             escribirArchivo.write(clave + "'" + nombreDueno + "'" + nombreMascota + "'" + edadMascota + "'" + direccion + "'" + telefono + "'" + prioridad + "'" + datosExtra + "\n");
+        }
+    }
+
+    protected void consultarMascota(String categorias) {
+        try (FileReader leerArchivo = new FileReader(nombreArchivo)) {
+            BufferedReader registro = new BufferedReader(leerArchivo);
+            String linea;
+            StringBuilder texto = new StringBuilder();
+            texto.append("Clave'Nombre-Dueño'Nombre-Mascota'Edad-Mascota'Dirección'Teléfono'Prioridad'").append(categorias).append("\n");
+
+            while ((linea = registro.readLine()) != null) {
+                texto.append(linea).append("\n");
+            }
+            ventana.mostrarTexto(texto);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
