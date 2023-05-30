@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Mascota {
@@ -31,6 +32,12 @@ public class Mascota {
         switch (prioridad) {
             case 1 -> prioridad = (11 * prioridad) / 10;
             case 3 -> prioridad = (9 * prioridad) / 9;
+        }
+    }
+
+    public void crearEscribirArchivo(String datosExtra) throws IOException {
+        try (FileWriter escribirArchivo = new FileWriter(nombreArchivo)) {
+            escribirArchivo.write(clave + "'" + nombreDueno + "'" + nombreMascota + "'" + edadMascota + "'" + direccion + "'" + telefono + "'" + prioridad + "'" + datosExtra + "\n");
         }
     }
 }
