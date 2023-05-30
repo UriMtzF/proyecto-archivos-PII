@@ -16,6 +16,7 @@ public class Vista {
         int ventana = JOptionPane.showOptionDialog(null, "Selecciona una opción", "Menú", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
         return ventana + 1;
     }
+
     public String pedirDatoCadena(String dato) {
         String str = "Escribe a continuación " + dato + ": ";
         return JOptionPane.showInputDialog(null, str);

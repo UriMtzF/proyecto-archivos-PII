@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Perro extends Mascota{
+public class Perro extends Mascota {
     public Perro() {
         precioConsulta = 500;
         nombreArchivo = "Perros.txt";
@@ -14,6 +14,7 @@ public class Perro extends Mascota{
         String datosExtra = raza + "'" + tamano;
         crearEscribirArchivo(datosExtra);
     }
+
     public void consultarPerro() {
         String categorias = "Raza'Tamaño";
         consultarMascota(categorias);

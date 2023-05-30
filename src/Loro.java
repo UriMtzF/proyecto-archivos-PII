@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Loro extends Mascota{
+public class Loro extends Mascota {
 
     public Loro() {
         precioConsulta = 300;
@@ -16,6 +16,7 @@ public class Loro extends Mascota{
         String datosExtra = masDeUnColor + "'" + vuela + "'" + canta;
         crearEscribirArchivo(datosExtra);
     }
+
     public void consultarLoro() {
         String categorias = "¿Tiene más de un color?'¿Vuela?'¿Canta?";
         consultarMascota(categorias);

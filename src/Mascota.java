@@ -39,7 +39,7 @@ public class Mascota {
 
     public void crearEscribirArchivo(String datosExtra) throws IOException {
         try (FileWriter escribirArchivo = new FileWriter(nombreArchivo)) {
-            escribirArchivo.write(clave + "'" + nombreDueno + "'" + nombreMascota + "'" + edadMascota + "'" + direccion + "'" + telefono + "'" + prioridad + "'" + precioConsulta + "'" +datosExtra + "\n");
+            escribirArchivo.write(clave + "'" + nombreDueno + "'" + nombreMascota + "'" + edadMascota + "'" + direccion + "'" + telefono + "'" + prioridad + "'" + precioConsulta + "'" + datosExtra + "\n");
         }
     }
 
