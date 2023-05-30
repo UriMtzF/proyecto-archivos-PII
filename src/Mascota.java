@@ -32,8 +32,8 @@ public class Mascota {
 
     private void calcularCostoConsulta() {
         switch (prioridad) {
-            case 1 -> prioridad = (11 * prioridad) / 10;
-            case 3 -> prioridad = (9 * prioridad) / 9;
+            case 1 -> precioConsulta = (11 * precioConsulta) / 10;
+            case 3 -> precioConsulta = (9 * precioConsulta) / 9;
         }
     }
 
